@@ -2,10 +2,49 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Etch-A-Sketch</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <script>
-    </script>    
-</body>
+<div id = container> 
+</div>
+<script>
+        
+        function drawGrid(size){
+        
+            
+            const drawLoc = document.querySelector("#container");
+            let rowDiv = document.createElement("div");
+            let columnDiv = document.createElement("div");
+            let x = columnDiv
+
+            rowDiv.classList.add("flex-grid")
+            columnDiv.classList.add("col")
+
+            columnDiv.textContent = "*";
+            
+            for (i = size; i > 0; i--){
+                console.log("Hit the first for loop")
+                rowDiv = document.createElement("div");
+                drawLoc.appendChild(rowDiv);                
+                rowDiv.classList.add("flex-grid")
+                for (j = size; j > 0; j--){
+                    console.log("second for loop")
+                    rowDiv.appendChild(columnDiv);
+                    columnDiv = document.createElement("div");
+                    columnDiv.classList.add("col")
+                    columnDiv.setAttribute("onmouseenter", addColour())
+                    columnDiv.textContent = "*";
+                }
+
+            }
+            
+            
+            
+        }
+
+        function addColour(){ 
+        }
+
+        drawGrid(prompt("How large of a grid would you like?", 8));
+    </script> 
 </html>
