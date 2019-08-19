@@ -3,12 +3,6 @@ const pixels = document.querySelectorAll(".pixel");
 const root = document.documentElement; //used for custom-attributes in css
 
 function drawGrid(size){
-    /*
-    let pixel = document.createElement("div");
-
-    pixel.classList.add("pixel") 
-    pixel.setAttribute("onmouseover", "addColour(this)")
-*/
     for (i=size*size; i>0; i--){
         pixel = document.createElement("div");
         pixel.classList.add("pixel")
