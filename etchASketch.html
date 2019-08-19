@@ -5,46 +5,12 @@
   <title>Etch-A-Sketch</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<div id = container> 
+<body>
+    <h1 class = "title
+    ">Etch-A-Sketch</h1>
+    <button id = "resetButton" class = "resetButton">Reset</button>
+    <div id = "container" class = "con size"> 
 </div>
-<script>
-        
-        function drawGrid(size){
-        
-            
-            const drawLoc = document.querySelector("#container");
-            let rowDiv = document.createElement("div");
-            let columnDiv = document.createElement("div");
-            let x = columnDiv
-
-            rowDiv.classList.add("flex-grid")
-            columnDiv.classList.add("col")
-
-            columnDiv.textContent = "*";
-            
-            for (i = size; i > 0; i--){
-                console.log("Hit the first for loop")
-                rowDiv = document.createElement("div");
-                drawLoc.appendChild(rowDiv);                
-                rowDiv.classList.add("flex-grid")
-                for (j = size; j > 0; j--){
-                    console.log("second for loop")
-                    rowDiv.appendChild(columnDiv);
-                    columnDiv = document.createElement("div");
-                    columnDiv.classList.add("col")
-                    columnDiv.setAttribute("onmouseenter", addColour())
-                    columnDiv.textContent = "*";
-                }
-
-            }
-            
-            
-            
-        }
-
-        function addColour(){ 
-        }
-
-        drawGrid(prompt("How large of a grid would you like?", 8));
-    </script> 
+</body>
+<script src="etchASketch.js"></script> 
 </html>

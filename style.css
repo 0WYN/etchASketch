@@ -1,24 +1,48 @@
-.flex-grid {
-    display: flex;
+body{
+  background: gray;
+  color: gray;
+  max-height: 700px;
 }
 
-.flex-grid .col {
-    flex: 1;
+.title{
+  text-align: center;
+  font-size: 3.0rem;
+  text-shadow: 0 0 .5rem black;
+  color: white;
+  padding: 1rem .5rem;
 }
+
+.con{
+  margin: auto;
+  display: grid;
+  grid-template-columns: var(--size-grid);
+  max-height: 700px;
+  max-width: 700px;
+  border: 3px solid black;
+}
+
 
 .mouseOver{
-  background: blue;
+  background-color: var(--px-color);
 }
 
-body {
-    padding: 20px;
-  }
-  .flex-grid { 
-    margin: 0 0 0 0;
-  }
-  .col {
-    background: salmon;
-    padding: 20px;
-  }
+.pixel {
+  height: var(--size-px);
+  width: var(--size-px);
+  padding: 0px;
+}
 
+.resetButton {
+  margin: auto auto 2rem;
+  display: grid;
+  border: .2rem solid black;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+}
   
