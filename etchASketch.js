@@ -18,9 +18,14 @@ function drawGrid(size){
 }
 
 function addColour(x){
-    let randomRed = Math.floor(Math.random() * 255); //makes the colour a random value
+    /*let randomRed = Math.floor(Math.random() * 255); //makes the colour a random value
     let randomGreen = Math.floor(Math.random() * 255);
     let randomBlue = Math.floor(Math.random() * 255);
+    */
+
+    let randomBlue = 255;
+    let randomGreen = 255;
+    let randomRed = 255;
 
     root.style.setProperty('--px-color', "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")");
     x.classList.add("mouseOver");
